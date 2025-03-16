@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeroImg from "../assets/Hero.png";
-
+import { FaCheckCircle } from "react-icons/fa";
 const tabs = [
   { id: "tab1", tabTitle: "Personal info" },
   { id: "tab2", tabTitle: "Skill" },
@@ -9,129 +9,251 @@ const tabs = [
 
 const content = {
   tab1: (
-    <div className="grid gap-5 ">
+    <div className="grid gap-5  font-serif">
       <span>
-        <h1>Unmatched service quality for over 3years</h1>
-        <p>
-          i specialize in crafting intuitive website with cutting edge
+        <h1 className="text-2xl font-bold">
+          Unmatched service quality for over 3years
+        </h1>
+        <p className="text-sm">
+          I specialize in crafting intuitive website with cutting edge
           technology delivering <br /> dyncmic and engaging user experience{" "}
         </p>
       </span>
-      <span className="grid gap-5 sm:flex sm:gap-20">
-        <span className=" list-none">
-          <li>Tomotele Christopher </li>
-          <li>Tomotelechristopher25@gmail.com</li>
-          <li>Maseter on computer science </li>
+      <span className="grid gap-7 sm:flex sm:gap-20">
+        <span className=" list-none text-sm">
+          <li> Tomotele Christopher </li>
+          <li> Tomotelechristopher25@gmail.com</li>
+          <li> Maseter on computer science </li>
         </span>
-        <span className=" list-none">
+        <span className=" list-none text-sm">
           <li>09152580773</li>
           <li>Born on 25th december 2005</li>
           <li>Lagos nigeria</li>
         </span>
       </span>
       <span className="grid gap-2">
-        <h1 className="border-b-2 pb-5">Language</h1>
+        <h1 className="border-b-2 pb-5 text-sm">Language</h1>
 
-        <p>English</p>
+        <p className="text-sm">English</p>
       </span>
     </div>
   ),
   tab2: (
     <div className="flex justify-between sm:gap-40  border-black  border-2 rounded-lg p-5">
-      <div className="grid gap-3 ">
+      <div className="grid gap-3  text-sm">
         <h1>Frontend</h1>
-        <span>
-          <p>HTML</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>CSS</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Tailwind</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Javascript</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>React</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
       </div>
-      <div className="grid gap-3">
+      <div className="grid gap-3  text-sm">
         <h1>Backend</h1>
-        <span>
-          <p>Node</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Express</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>MongoDB</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Typescript</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Git</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
       </div>
     </div>
   ),
   tab3: (
     <div className="flex justify-between sm:gap-40  border-black  border-2 rounded-lg p-5">
-      <div className="grid gap-3 ">
+      <div className="grid gap-3  text-sm">
         <h1>Frontend</h1>
-        <span>
-          <p>HTML</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>CSS</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Tailwind</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Javascript</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>React</p>
-          <p>Experienced</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
       </div>
-      <div className="grid gap-3">
+      <div className="grid gap-3  text-sm">
         <h1>Backend</h1>
-        <span>
-          <p>Node</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Express</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>MongoDB</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Typescript</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
-        <span>
-          <p>Git</p>
-          <p>Intermidiate</p>
+        <span className="flex items-center gap-1">
+          <span>
+            <FaCheckCircle />
+          </span>
+          <span>
+            {" "}
+            <p>HTML</p>
+            <p>Experienced</p>
+          </span>
         </span>
       </div>
     </div>

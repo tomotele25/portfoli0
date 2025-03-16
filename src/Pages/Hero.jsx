@@ -8,13 +8,13 @@ const Hero = () => {
       <div className="grid px-10 sm:flex sm:justify-between sm:items-center  sm:px-30 h-full">
         <div>
           <span className="gap-5  sm:flex sm:flex-col sm:gap-2 pb-6">
-            <p className="text-base pb-3 sm:pb-0">Web Developer</p>
-            <h1 className=" text-2xl sm:text-3xl pb-3 sm:pb-3 leading-relaxed font-bold">
+            <p className="text-base pb-3 sm:pb-0 font-serif">Web Developer</p>
+            <h1 className=" text-2xl sm:text-3xl pb-3 sm:pb-3 leading-relaxed font-bold font-serif">
               Hello,my name is <br /> Tomotele Christopher
             </h1>
-            <p className=" leading-relaxed pb-8 sm:pb-0">
-              Brief decription with insight into myself my vocational <br />{" "}
-              journey and what i engage in professionally
+            <p className=" leading-relaxed pb-8 sm:pb-0 font-serif font-medium ">
+              Brief decription with insight into myself my vocational journey
+              and what i <br /> engage in professionally
             </p>
           </span>
           <span
