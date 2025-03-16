@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div className="">
-      <div className=" p-12 flex justify-between sm:px-30 h-f">
+      <div className="h-[20vh] px-12 flex justify-between items-center sm:px-30 ">
         <div>
           <h1 className="text-2xl">CT</h1>
         </div>
