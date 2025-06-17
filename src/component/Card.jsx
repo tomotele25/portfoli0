@@ -1,15 +1,13 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ description, title, icon }) => {
   return (
-    <div className="bg-white shadow-lg p-5 rounded-md">
-      <h1 className="text-2xl font-medium ">Web design</h1>
-      <p className=" text-sm h-32 sm:text-md font-serif">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
-        dignissimos voluptatibus aliquam eligendi, quam soluta eos blanditiis
-        saepe, suscipit repudiandae, quas ratione hic aliquid asperiores
-        consequuntur porro doloremque provident incidunt.
-      </p>
+    <div className="bg-white shadow-lg h-96 p-5 rounded-md grid gap-5">
+      <span className="flex justify-center">{icon}</span>
+      <span>
+        <h1 className="text-2xl font-medium  ">{title}</h1>
+        <p className=" text-sm h-32 sm:text-md font-serif">{description}</p>
+      </span>
     </div>
   );
 };

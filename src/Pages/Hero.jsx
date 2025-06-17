@@ -1,49 +1,42 @@
 import React from "react";
-import HeroImg from "../assets/Hero.png";
-import { FiSend, FiDownload } from "react-icons/fi";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { useTheme } from "../ThemeContext";
+import { Link } from "react-router-dom";
+
 const Hero = () => {
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
+
   return (
-    <div className=" h-[100vh] sm:h-[80vh] ">
-      <div className="grid px-10 sm:flex sm:justify-between sm:items-center  sm:px-30 h-full">
-        <div>
-          <span className="gap-5  sm:flex sm:flex-col sm:gap-2 pb-6">
-            <p className="text-base pb-3 sm:pb-0 font-serif">Web Developer</p>
-            <h1 className=" text-2xl sm:text-3xl pb-3 sm:pb-3 leading-relaxed font-bold font-serif">
-              Hello,my name is <br /> Tomotele Christopher
-            </h1>
-            <p className=" leading-relaxed pb-8 sm:pb-0 font-serif font-medium ">
-              Brief decription with insight into myself my vocational journey
-              and what i <br /> engage in professionally
-            </p>
-          </span>
-          <span
-            className="flex sm:flex sm:flex-row gap-5 
-        "
-          >
-            <button className=" flex items-center w-32 justify-center h-14 gap-2 sm:w-40 sm:h-14 bg-white shadow-md sm:p-5 rounded-lg">
-              Contact me
-              <FiSend />
-            </button>
-            <button className="flex items-center  w-32 justify-center h-14  sm:w-44 sm:h-14 gap-2 bg-white shadow-md sm:p-5 rounded-lg ">
-              Download CV
-              <FiDownload />
-            </button>
-          </span>
-          <span className=" pt-8 pl-5 flex gap-5 sm:pt-5">
-            <FaGithub size={20} />
-            <FaLinkedin size={20} />
-            <FaTwitter size={20} />
-          </span>
-        </div>
-        <div className="flex justify-center">
-          <img
-            src={HeroImg}
-            className="rounded-full w-52 h-52 sm:w-72 sm:h-72"
-            alt=""
-          />
-        </div>
-      </div>
+    <div
+      className={` ${
+        isDark ? "bg-gray-800 text-white" : "bg-white text-gray-900"
+      }  flex flex-col h-[89vh] justify-center gap-10  items-center`}
+    >
+      <span className="flex flex-col gap-5  items-center">
+        <h1 className="text-4xl sm:text-5xl font-bold ">Need a website </h1>
+        <p className="min-w-2/3 p-2 md:w-3/4 lg:min-w-2/3  text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sit
+          aspernatur enim, libero praesentium totam molestias assumenda debitis
+          accusamus soluta velit error optio excepturi ipsum, asperiores nostrum
+          voluptatum quaerat deserunt?
+        </p>
+      </span>
+      <span className="grid sm:flex gap-5">
+        <Link
+          className={`${
+            isDark ? "bg-white text-black" : "bg-slate-800 text-white"
+          } px-13 py-3 justify-center flex rounded-b-lg`}
+        >
+          View Resume
+        </Link>
+        <Link
+          className={`${
+            isDark ? "bg-white text-black" : "bg-slate-800 text-white"
+          } px-13 py-3 justify-center flex rounded-b-lg`}
+        >
+          Email me
+        </Link>
+      </span>
     </div>
   );
 };

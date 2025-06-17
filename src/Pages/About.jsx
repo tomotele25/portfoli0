@@ -1,300 +1,56 @@
-import React, { useState } from "react";
-import HeroImg from "../assets/Hero.png";
-import { FaCheckCircle } from "react-icons/fa";
-const tabs = [
-  { id: "tab1", tabTitle: "Personal info" },
-  { id: "tab2", tabTitle: "Skill" },
-  { id: "tab3", tabTitle: "Experience" },
-];
-
-const content = {
-  tab1: (
-    <div className="grid gap-5  font-serif">
-      <span>
-        <h1 className="text-2xl font-bold">
-          Unmatched service quality for over 3years
-        </h1>
-        <p className="text-sm">
-          I specialize in crafting intuitive website with cutting edge
-          technology delivering <br /> dyncmic and engaging user experience{" "}
-        </p>
-      </span>
-      <span className="grid gap-7 sm:flex sm:gap-20">
-        <span className=" list-none text-sm">
-          <li> Tomotele Christopher </li>
-          <li> Tomotelechristopher25@gmail.com</li>
-          <li> Maseter on computer science </li>
-        </span>
-        <span className=" list-none text-sm">
-          <li>09152580773</li>
-          <li>Born on 25th december 2005</li>
-          <li>Lagos nigeria</li>
-        </span>
-      </span>
-      <span className="grid gap-2">
-        <h1 className="border-b-2 pb-5 text-sm">Language</h1>
-
-        <p className="text-sm">English</p>
-      </span>
-    </div>
-  ),
-  tab2: (
-    <div className="flex justify-between sm:gap-40  border-black  border-2 rounded-lg p-5">
-      <div className="grid gap-3  text-sm">
-        <h1>Frontend</h1>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-      </div>
-      <div className="grid gap-3  text-sm">
-        <h1>Backend</h1>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-      </div>
-    </div>
-  ),
-  tab3: (
-    <div className="flex justify-between sm:gap-40  border-black  border-2 rounded-lg p-5">
-      <div className="grid gap-3  text-sm">
-        <h1>Frontend</h1>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-      </div>
-      <div className="grid gap-3  text-sm">
-        <h1>Backend</h1>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-        <span className="flex items-center gap-1">
-          <span>
-            <FaCheckCircle />
-          </span>
-          <span>
-            {" "}
-            <p>HTML</p>
-            <p>Experienced</p>
-          </span>
-        </span>
-      </div>
-    </div>
-  ),
-};
+import React from "react";
+import { useTheme } from "../ThemeContext";
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("tab1");
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
+
   return (
-    <div className=" h-[100vh]">
-      <div>
-        <h1 className="text-4xl flex justify-center ">About Me</h1>
-      </div>
-      <div className=" flex   h-full items-center justify-between px-10  sm:px-30 ">
-        <div className="hidden sm:flex h-72">
-          <img src={HeroImg} className="rounded-full " alt="" />
-        </div>
-        <div className="flex flex-col gap-5 ">
-          <div className=" grid gap-5">
-            <div className="flex flex-wrap  gap-2 pt-10 ">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  className={` ${
-                    activeTab === tab.id
-                      ? "bg-blue-200 p-3  shadow-md"
-                      : "bg-slate-50"
-                  }  rounded-md p-3 sm:w-33`}
-                  onClick={() => {
-                    setActiveTab(tab.id);
-                  }}
-                >
-                  {tab.tabTitle}
-                </button>
-              ))}
-            </div>
-            <div className="sm:h-fit sm:w-fit">{content[activeTab]}</div>
+    <section
+      className={`${
+        isDark ? "bg-slate-700 text-white" : "bg-white text-black"
+      }  py-15 px-6 md:px-12`}
+    >
+      <div
+        className={`max-w-5xl ${
+          isDark ? " text-white" : " text-black"
+        }  mx-auto text-center`}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+        <p className={`text-lg md:text-xl max-w-3xl mx-auto mb-8 `}>
+          I'm a passionate developer who loves crafting responsive,
+          user-friendly websites and applications. Whether it's building from
+          scratch or bringing a design to life, I focus on clean code, great
+          performance, and intuitive user experiences.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8 text-left mt-12">
+          <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition ">
+            <h3 className="text-xl font-semibold mb-2"> Tech Stack</h3>
+            <p className="">
+              React, Next.js, Tailwind CSS, Node.js, MongoDB, Express, Git &
+              GitHub.
+            </p>
+          </div>
+
+          <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition ">
+            <h3 className="text-xl font-semibold mb-2"> Focus Areas</h3>
+            <p className="">
+              Frontend development, UI/UX design, responsive layout, performance
+              optimization.
+            </p>
+          </div>
+
+          <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition ">
+            <h3 className="text-xl font-semibold mb-2"> Goals</h3>
+            <p className="">
+              To collaborate on impactful projects, learn continuously, and
+              deliver solutions that help people and businesses thrive.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

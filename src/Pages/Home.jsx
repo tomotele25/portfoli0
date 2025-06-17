@@ -4,24 +4,16 @@ import About from "./About";
 import Services from "./Services";
 import LatestProject from "./LatestProject";
 import Footer from "../component/Footer";
+import BackToTop from "../component/Backtotop";
 const Home = () => {
   return (
-    <div className="">
-      <div className="">
-        <Hero />
-      </div>
-      <div className="">
-        <About />
-      </div>
-      <div className=" ">
-        <Services />
-      </div>
-      <div className="">
-        <LatestProject />
-      </div>
-      <div>
-        <Footer />
-      </div>
+    <div>
+      <BackToTop />
+      <Hero />
+      <About />
+      <Services />
+      <LatestProject />
+      <Footer />
     </div>
   );
 };

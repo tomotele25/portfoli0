@@ -1,39 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FiMenu, FiSend, FiDownload } from "react-icons/fi"; // Default menu icon with three lines
-import { useState } from "react";
-const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  return (
-    <div className="">
-      <div className="h-[20vh] px-12 flex justify-between items-center sm:px-30 ">
-        <div>
-          <h1 className="text-2xl">CT</h1>
-        </div>
-        <div className=" hidden gap-5  sm:flex mr-10">
-          <Link>Home</Link>
-          <Link to="project">Projects</Link>
-          <Link>Contact</Link>
-        </div>
+import { useTheme } from "../ThemeContext";
+import { FiSun, FiMoon } from "react-icons/fi";
 
-        <div
-          onClick={() => {
-            setIsVisible(!isVisible);
-          }}
-          className="flex sm:hidden relative"
+const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <nav
+      className={`w-full px-6 py-4 border-b-2  flex justify-between items-center shadow-md ${
+        isDark ? "bg-gray-800 text-white" : "bg-white text-gray-900"
+      }`}
+    >
+      {/* Left side - Your name */}
+      <h1 className="text-2xl font-bold">DevChris</h1>
+
+      {/* Right side - Menu + Toggle */}
+      <div className="flex items-center space-x-6">
+        <ul className="hidden md:flex space-x-6 font-medium">
+          <li className="hover:underline cursor-pointer">Home</li>
+          <li className="hover:underline cursor-pointer">About</li>
+          <li className="hover:underline cursor-pointer">Projects</li>
+          <li className="hover:underline cursor-pointer">Contact</li>
+        </ul>
+
+        {/* Toggle icon */}
+        <button
+          onClick={() => setTheme(isDark ? "light" : "dark")}
+          className="p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition"
         >
-          <FiMenu size={28} />
-        </div>
-        {isVisible && (
-          <div className=" grid absolute left-0 bg-black top-20 h-[calc(100vh-20px)] w-full z-20 text-white items-center justify-center  py-60">
-            <Link>Home</Link>
-            <Link>About</Link>
-            <Link>Projects</Link>
-            <Link>Contact</Link>
-          </div>
-        )}
+          {isDark ? <FiSun size={18} /> : <FiMoon size={18} />}
+        </button>
       </div>
-    </div>
+    </nav>
   );
 };
 
