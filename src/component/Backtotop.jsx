@@ -1,35 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "../ThemeContext";
 import { FaArrowCircleUp } from "react-icons/fa";
+
 const BackToTop = () => {
   const [show, setShow] = useState(false);
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
 
   useEffect(() => {
-    const toggleVisibility = () => {
+    const handleScroll = () => {
       setShow(window.scrollY > 300);
     };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const { theme, setTheme } = useTheme();
-  const isDark = theme === "dark";
 
   return (
     show && (
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-50   p-5 rounded-full shadow-lg  transition duration-300  ${
-          isDark ? "bg-slate-800 text-white" : "bg-white text-black"
+        aria-label="Back to Top"
+        className={`fixed bottom-6 right-6 z-50 p-3 rounded-full shadow-lg border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+          isDark
+            ? "bg-slate-800 text-white border-slate-700 hover:bg-slate-700"
+            : "bg-white text-black border-gray-300 hover:bg-gray-100"
         }`}
       >
-        <FaArrowCircleUp
-          className={`${isDark ? "font-light" : "font-black"}`}
-        />
+        <FaArrowCircleUp size={24} />
       </button>
     )
   );
